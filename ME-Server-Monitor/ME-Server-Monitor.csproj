@@ -55,7 +55,7 @@
     <ManifestCertificateThumbprint>47AD18CBE93F320872EB6A6F21FBF1F53CF6997F</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ME_ServiceController_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ME-Server-Monitor_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -91,7 +91,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Directory.Build.props" />
-    <None Include="ME_ServiceController_TemporaryKey.pfx" />
+    <None Include="ME-Server-Monitor_TemporaryKey.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
