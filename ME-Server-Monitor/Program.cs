@@ -10,22 +10,22 @@ namespace MEServerMonitor
         static void Main(string[] args)
         {
             ServiceController service = new ServiceController();
-            service.ServiceName = "ME-Server-1"; // Insert service name to be monitored
+            service.ServiceName = "[Service name]"; // Insert service name to be monitored
             int n = 0, b = 0;
             bool msgSent = false;
 
             // logging
 
-            string token = "https://discord.com/api/webhooks/704997459776241664/qcCxo-NhNaghVaX64sT_8rdt-dC_2vRL2mNwjZC6kjDkuZxd_pAS7nzM8xqTHq7Lj1aY"; // Insert Discord webhook URL 
-            string username = "Server Status"; // Insert username that posts messages
-            string avatar = "https://cdn.discordapp.com/attachments/704997359372730419/770637256074592266/logo.png"; // Insert URL for avatar image
+            string token = "[Discord webhook URL]"; // Insert Discord webhook URL 
+            string username = "[Username]"; // Insert username that posts messages
+            string avatar = "[Avatar URL]"; // Insert URL for avatar image
 
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("| Medieval Engineers Server Monitor |");
             Console.WriteLine("-------------------------------------\n");
 
             DateTime restart1 = DateTime.Today.AddHours(3); // Set time for scheduled restart1
-            DateTime restart2 = DateTime.Today.AddHours(14).AddMinutes(4); // Set time for scheduled restart2
+            DateTime restart2 = DateTime.Today.AddHours(9); // Set time for scheduled restart2
             DateTime restart3 = DateTime.Today.AddHours(15); // Set time for scheduled restart3
             DateTime restart4 = DateTime.Today.AddHours(20); // Set time for scheduled restart4
 
@@ -133,7 +133,7 @@ namespace MEServerMonitor
                 // Restart after crash
                 if (service.Status == ServiceControllerStatus.Stopped && msgSent == true)
                 {
-                    discord.Execute(now + " - <@&381388788536049664> Server stopped unexpectedly!", username, avatar, false); // Mention @role
+                    discord.Execute(now + " - <@[Role ID]> Server stopped unexpectedly!", username, avatar, false); // Mention @role
                     Thread.Sleep(10000);
                     now = DateTime.Now;
                     Console.WriteLine("Starting service {0}...", service.ServiceName);
