@@ -113,20 +113,22 @@ namespace MEServerMonitor
                     discord.Execute(now + " - Stopping server...", username, avatar, false);
                     service.Stop();
                     service.WaitForStatus(ServiceControllerStatus.Stopped);
-
+                    service.Refresh();
                     now = DateTime.Now;
-
                     Console.WriteLine("Service {0} is {1}.", service.ServiceName, service.Status.ToString());
                     discord.Execute(now + " - Server stopped successfully.", username, avatar, false);
-
                     Thread.Sleep(10000);
-                    now = DateTime.Now;
 
                     // Start
+                    now = DateTime.Now;
                     Console.WriteLine("Starting service {0}...\n", service.ServiceName);
                     discord.Execute(now + " - Starting server...", username, avatar, false);
                     service.Start();
                     service.WaitForStatus(ServiceControllerStatus.Running);
+                    service.Refresh();
+                    now = DateTime.Now;
+                    Console.WriteLine("Service {0} started successfully.\n", service.ServiceName);
+                    discord.Execute(now + " - Server started successfully.", username, avatar, false);
                     msgSent = false; // Reset bool, for healthcheck message
                 }
 
@@ -144,7 +146,7 @@ namespace MEServerMonitor
                     now = DateTime.Now;
                     Console.WriteLine("Service {0} started successfully.\n", service.ServiceName);
                     discord.Execute(now + " - Server started successfully.", username, avatar, false);
-                    msgSent = false;
+                    msgSent = false; // Reset bool, for healthcheck message
                 }
 
                 Thread.Sleep(10000);
