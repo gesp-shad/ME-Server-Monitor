@@ -3,7 +3,7 @@ using System.ServiceProcess;
 using System.Threading;
 using DiscordWebhookLib;
 
-namespace ME_ServiceController
+namespace MEServerMonitor
 {
     class Program
     {

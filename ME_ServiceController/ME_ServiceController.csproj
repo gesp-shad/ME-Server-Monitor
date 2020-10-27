@@ -25,8 +25,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BC223EB1-F94C-4FD3-A9F5-2FF9E45B2FDC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ME_ServiceController</RootNamespace>
-    <AssemblyName>ME_ServiceController</AssemblyName>
+    <RootNamespace>MEServerMonitor</RootNamespace>
+    <AssemblyName>MEServerMonitor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
