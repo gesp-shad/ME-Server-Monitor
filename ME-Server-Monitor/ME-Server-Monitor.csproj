@@ -56,7 +56,8 @@
     <ManifestCertificateThumbprint>47AD18CBE93F320872EB6A6F21FBF1F53CF6997F</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ME-Server-Monitor_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

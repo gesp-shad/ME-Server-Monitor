@@ -18,7 +18,7 @@ namespace MEServerMonitor
 
             string token = "[Discord webhook URL]"; // Insert Discord webhook URL 
             string username = "[Username]"; // Insert username that posts messages
-            string avatar = "[Avatar URL]"; // Insert URL for avatar image
+            string avatar = "[Avatar image URL"; // Insert URL for avatar image
 
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("| Medieval Engineers Server Monitor |");
